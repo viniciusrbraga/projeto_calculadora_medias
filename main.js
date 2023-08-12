@@ -71,7 +71,8 @@ function atualizaTabela() {
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    /* TOFIXED limita o número de casas decimais */
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= mediaMinima ? spanAprovado : spanReprovado;
 
     /* exibe o conteudo na tela */
